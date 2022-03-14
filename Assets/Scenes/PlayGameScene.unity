@@ -373,7 +373,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3489585386851666057, guid: 1c6a9e2295c08f343882b8e334fff598, type: 3}
       propertyPath: m_Name
-      value: Screen Messages
+      value: Messages
       objectReference: {fileID: 0}
     - target: {fileID: 3489585386851666062, guid: 1c6a9e2295c08f343882b8e334fff598, type: 3}
       propertyPath: m_RootOrder
@@ -692,6 +692,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 9020944781469338640, guid: 5f2e4c0601b5ce24e9721674b0523017, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9020944781469338640, guid: 5f2e4c0601b5ce24e9721674b0523017, type: 3}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9020944781469338641, guid: 5f2e4c0601b5ce24e9721674b0523017, type: 3}
       propertyPath: m_RootOrder
       value: 0
