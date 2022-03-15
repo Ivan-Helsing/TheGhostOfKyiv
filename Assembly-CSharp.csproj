@@ -61,12 +61,12 @@
     <Compile Include="Assets\Scripts\DamageDealer.cs" />
     <Compile Include="Assets\Scripts\PlayerActions.cs" />
     <Compile Include="Assets\Scripts\LaserEater.cs" />
+    <Compile Include="Assets\Scripts\SceneLoader.cs" />
     <Compile Include="Assets\Scripts\EnemyCombat.cs" />
     <Compile Include="Assets\Scripts\Spawner.cs" />
     <Compile Include="Assets\Scripts\EnemyPathing.cs" />
     <Compile Include="Assets\Scripts\WaveConfig.cs" />
     <Compile Include="Assets\Scripts\StartMenu.cs" />
-    <Compile Include="Assets\Scripts\SceneLoader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\z. UsableAssets\TextMesh Pro\Shaders\TMPro.cginc" />
