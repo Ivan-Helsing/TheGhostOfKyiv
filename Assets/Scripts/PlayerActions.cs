@@ -32,8 +32,13 @@ public class PlayerActions : MonoBehaviour
 
 
 
+    [Header("Player Settings")]
+    [SerializeField] Sprite newSprite;
+
+
     void Start()
     {
+        PlayerSpriteReplace();
         aircraftCollider2D = GetComponent<BoxCollider2D>();
         StartCoroutine(LazerShooting());
         currentHealth = health;
@@ -43,6 +48,15 @@ public class PlayerActions : MonoBehaviour
     {
         MoveAircraft();
     }
+
+
+    private void PlayerSpriteReplace()
+    {
+        GetComponentInChildren<SpriteRenderer>().sprite = newSprite;
+    }
+
+
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
