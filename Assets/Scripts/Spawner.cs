@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Spawner : MonoBehaviour
 {
@@ -13,6 +14,11 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnAllWaves());
+    }
+
+    private void Update()
+    {
+        if (FindObjectsOfType<EnemyPathing>().Length <= 0) { SceneManager.LoadScene("StartMenuScene"); }
     }
 
     private IEnumerator SpawnAllWaves()
