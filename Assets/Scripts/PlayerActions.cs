@@ -79,11 +79,11 @@ public class PlayerActions : MonoBehaviour
 
     private void Death()
     {
+        FindObjectOfType<SceneLoader>().WaitAndLoadStartMenu();
         GameObject particlesExplosion = Instantiate(explosionVFX, transform.localPosition, Quaternion.identity);
         Destroy(gameObject);
         Destroy(particlesExplosion, explosionDuration);
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, explosionSoundVolume);
-        SceneManager.LoadScene("StartMenuScene");
     }
 
     private IEnumerator LazerShooting()

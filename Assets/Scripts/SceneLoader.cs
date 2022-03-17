@@ -17,10 +17,31 @@ public class SceneLoader : MonoBehaviour
         //StartCoroutine(PauseGameAndLoadStartMenu());   // add only when make game Pause.
     }
 
-    //Find how to pause game before scenechanging.
-    private IEnumerator PauseGameAndLoadStartMenu()
+    public void LoadShedScene()
     {
-        yield return new WaitForSeconds(1);
+        SceneManager.LoadScene("ShedScene");
+    }
+
+
+    public void WaitAndLoadStartMenu()
+    {
+        StartCoroutine(PauseGameAndLoadStartMenu());
+    }
+
+        //Find how to pause game before scenechanging.
+        private IEnumerator PauseGameAndLoadStartMenu()
+    {
+        yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene("StartMenuScene");
     }
+
+
+
+
+    public void GameQuit()
+    {
+        Application.Quit();
+    }
+
+
 }
