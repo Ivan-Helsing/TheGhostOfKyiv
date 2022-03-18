@@ -12,15 +12,20 @@ public class StartMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int highScore = PlayerPrefs.GetInt(PlayGameUI.HighScoreKey, 0);
-
-        highScoreText.text = $"High Score: {highScore}";
+        HighScoreSet();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    private void HighScoreSet()
+    {
+        int highScore = PlayerPrefs.GetInt(PlayGameUI.HighScoreKey, 0);
+
+        highScoreText.text = $"{highScore}";
     }
 
 
