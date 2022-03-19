@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d29b14bfea446134182e8019407e4245, type: 3}
-  m_Name: Wave 31
+  m_Name: Wave 40 (Boss)
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 2379355022029249048, guid: f9b5eb1dcef07c84b8600b46e6ab3e9f, type: 3}
-  pathPrefab: {fileID: 8299779017340619910, guid: 8e600d319e4c66b4f81ce3a709ce6143, type: 3}
+  enemyPrefab: {fileID: 2379355022029249048, guid: 3c7333e7c49580547939157147f086a5, type: 3}
+  pathPrefab: {fileID: 5803960593184376434, guid: 3393bf5cb7b6d90418f72f11d2a40f91, type: 3}
   timeBetweenSpawn: 2
   spawnRandomFactor: 0.3
   numberOfEnemies: 1
-  moveSpeed: 0.5
+  moveSpeed: 1
   sizeScale: 1

@@ -294,6 +294,18 @@ PrefabInstance:
       propertyPath: playerPrefab
       value: 
       objectReference: {fileID: 2068478461}
+    - target: {fileID: 428187210025226333, guid: 0459efebfce04144e9b34f7d546a726a, type: 3}
+      propertyPath: putlerMessage
+      value: 
+      objectReference: {fileID: 3489585387085525155}
+    - target: {fileID: 428187210025226333, guid: 0459efebfce04144e9b34f7d546a726a, type: 3}
+      propertyPath: waveConfigs.Array.size
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 428187210025226333, guid: 0459efebfce04144e9b34f7d546a726a, type: 3}
+      propertyPath: waveConfigs.Array.data[40]
+      value: 
+      objectReference: {fileID: 11400000, guid: afa5c7f4083784f4296cf7d6a8b24861, type: 2}
     - target: {fileID: 428187210025226335, guid: 0459efebfce04144e9b34f7d546a726a, type: 3}
       propertyPath: m_Name
       value: Spawner
@@ -309,7 +321,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3404033982690017515, guid: 590e7545448828b4ab1d85ac6dd59d84, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.86
+      value: 11.4
       objectReference: {fileID: 0}
     - target: {fileID: 3404033982690017516, guid: 590e7545448828b4ab1d85ac6dd59d84, type: 3}
       propertyPath: m_Follow
@@ -321,11 +333,11 @@ PrefabInstance:
       objectReference: {fileID: 275723067}
     - target: {fileID: 3404033983652634760, guid: 590e7545448828b4ab1d85ac6dd59d84, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.86
+      value: 4.066432
       objectReference: {fileID: 0}
     - target: {fileID: 3404033983652634760, guid: 590e7545448828b4ab1d85ac6dd59d84, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.3799996
+      value: -2.3951406
       objectReference: {fileID: 0}
     - target: {fileID: 3404033983875209396, guid: 590e7545448828b4ab1d85ac6dd59d84, type: 3}
       propertyPath: m_Name
@@ -450,6 +462,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c6a9e2295c08f343882b8e334fff598, type: 3}
+--- !u!1 &3489585387085525155 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3489585386851666057, guid: 1c6a9e2295c08f343882b8e334fff598, type: 3}
+  m_PrefabInstance: {fileID: 3489585387085525154}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5515979581615986181
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -747,7 +764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9020944781469338641, guid: 5f2e4c0601b5ce24e9721674b0523017, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.86
+      value: 11.4
       objectReference: {fileID: 0}
     - target: {fileID: 9020944781469338641, guid: 5f2e4c0601b5ce24e9721674b0523017, type: 3}
       propertyPath: m_LocalPosition.y
@@ -795,7 +812,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9020944781469338647, guid: 5f2e4c0601b5ce24e9721674b0523017, type: 3}
       propertyPath: hearts
-      value: 3
+      value: 333
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f2e4c0601b5ce24e9721674b0523017, type: 3}

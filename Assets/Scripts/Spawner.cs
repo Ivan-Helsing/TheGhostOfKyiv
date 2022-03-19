@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] List<WaveConfig> waveConfigs;
     [SerializeField] int startingWave = 0;
     [SerializeField] int enemyIncreaser = 0;
-
+    [SerializeField] GameObject putlerMessage;
 
 
     void Start()
@@ -18,7 +18,7 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
-        if (FindObjectsOfType<EnemyPathing>().Length <= 0) { SceneManager.LoadScene("StartMenuScene"); }
+        if (FindObjectsOfType<EnemyPathing>().Length <= 0) { putlerMessage.SetActive(true); FindObjectOfType<SceneLoader>().WaitAndLoadStartMenu(); putlerMessage.SetActive(false); }
     }
 
     private IEnumerator SpawnAllWaves()
@@ -45,8 +45,6 @@ public class Spawner : MonoBehaviour
             yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawns());
         }
     }
-
-    private void IncreaseEnemyCount() { if (startingWave >= waveConfigs.Count) { startingWave = 0; enemyIncreaser += 1; } }
 
 
 
