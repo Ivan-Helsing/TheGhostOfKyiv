@@ -9,6 +9,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] int startingWave = 0;
     [SerializeField] int enemyIncreaser = 0;
     [SerializeField] GameObject putlerMessage;
+    private bool messageInstantiated = false;
 
 
     void Start()
@@ -18,7 +19,12 @@ public class Spawner : MonoBehaviour
 
     private void Update()
     {
-        if (FindObjectsOfType<EnemyPathing>().Length <= 0) { putlerMessage.SetActive(true); FindObjectOfType<SceneLoader>().WaitAndLoadStartMenu(); putlerMessage.SetActive(false); }
+        if (FindObjectsOfType<EnemyPathing>().Length <= 0 && !messageInstantiated)
+        {
+            Instantiate(putlerMessage, transform.position, Quaternion.identity);
+            FindObjectOfType<SceneLoader>().WaitAndLoadStartMenu();
+            messageInstantiated = true;
+        }
     }
 
     private IEnumerator SpawnAllWaves()

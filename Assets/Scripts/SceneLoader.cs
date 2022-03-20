@@ -6,6 +6,15 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    
+
+    private void Update()
+    {
+        
+    }
+
+
+
     public void LoadPlayGameScene()
     {
         SceneManager.LoadScene("PlayGameScene");
@@ -31,7 +40,7 @@ public class SceneLoader : MonoBehaviour
         //Find how to pause game before scenechanging.
         private IEnumerator PauseGameAndLoadStartMenu()
     {
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("StartMenuScene");
     }
 
