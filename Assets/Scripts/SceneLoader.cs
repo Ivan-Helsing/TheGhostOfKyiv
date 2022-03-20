@@ -6,13 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
-    
 
-    private void Update()
+    [SerializeField] GameObject quitPopup;
+
+
+    public void QuitPopupActivate()
     {
-        
+        quitPopup.SetActive(true);
     }
-
+    public void QuitPopupDeactivate()
+    {
+        quitPopup.SetActive(false);
+    }
 
 
     public void LoadPlayGameScene()

@@ -65,10 +65,18 @@ public class EnemyCombat : MonoBehaviour
 
     private void Death()
     {
+        //SetCoins();
         GameObject particlesExplosion = Instantiate(explosionVFX, transform.localPosition, Quaternion.identity);
         Destroy(gameObject);
         Destroy(particlesExplosion, explosionDuration);
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, explosionSoundVolume);
 
     }
+
+
+    private int SetCoins()
+    {
+        return 1;
+    }
+
 }
