@@ -233,7 +233,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2068478461 stripped
 GameObject:
@@ -715,6 +715,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 151794402}
+    - target: {fileID: 7794896851812303604, guid: db8639b59208e114f9b9fb84cdeb872a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7794896851912166026, guid: db8639b59208e114f9b9fb84cdeb872a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7794896851983483046, guid: db8639b59208e114f9b9fb84cdeb872a, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -820,9 +828,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Clouds
       objectReference: {fileID: 0}
+    - target: {fileID: 8019401300193109568, guid: 9afdc5a5c1673c34f8fbbbc827c15823, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8019401300193109581, guid: 9afdc5a5c1673c34f8fbbbc827c15823, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8019401300193109581, guid: 9afdc5a5c1673c34f8fbbbc827c15823, type: 3}
       propertyPath: m_LocalPosition.x
@@ -873,10 +885,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 9020944781469338640, guid: 5f2e4c0601b5ce24e9721674b0523017, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 52f931883f88aa549bc715a3f2edf26d, type: 3}
     - target: {fileID: 9020944781469338641, guid: 5f2e4c0601b5ce24e9721674b0523017, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -924,22 +932,6 @@ PrefabInstance:
     - target: {fileID: 9020944781469338642, guid: 5f2e4c0601b5ce24e9721674b0523017, type: 3}
       propertyPath: m_Name
       value: PlayerAircraft
-      objectReference: {fileID: 0}
-    - target: {fileID: 9020944781469338647, guid: 5f2e4c0601b5ce24e9721674b0523017, type: 3}
-      propertyPath: speed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 9020944781469338647, guid: 5f2e4c0601b5ce24e9721674b0523017, type: 3}
-      propertyPath: health
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 9020944781469338647, guid: 5f2e4c0601b5ce24e9721674b0523017, type: 3}
-      propertyPath: hearts
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9020944781469338647, guid: 5f2e4c0601b5ce24e9721674b0523017, type: 3}
-      propertyPath: fireDelay
-      value: 0.2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f2e4c0601b5ce24e9721674b0523017, type: 3}

@@ -9685,7 +9685,7 @@ SpriteRenderer:
   m_SortingLayerID: -1909080551
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ea880bdea587380439f0064fa2b0c5be, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 33e0be396b32d2248ae102f0e6153fb8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9734,7 +9734,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.98, y: 0.75}
+    oldSize: {x: 0.99, y: 0.75}
     newSize: {x: 0.99, y: 0.75}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9781,7 +9781,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.98, y: 0.75}
+    oldSize: {x: 0.99, y: 0.75}
     newSize: {x: 0.99, y: 0.75}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -9808,10 +9808,9 @@ MonoBehaviour:
   explosionVFX: {fileID: 2800171866581895630, guid: d527a52c2aa5d71448b7f439d7927799, type: 3}
   deathSFX: {fileID: 8300000, guid: d068052a3a48e7745887225fcb0a1fc1, type: 3}
   explosionSoundVolume: 0.75
-  speed: 10
+  speed: 5
   fireSpeed: 20
-  fireDelay: 0.25
+  fireDelay: 0.2
   explosionDuration: 0.5
-  health: 500
-  hearts: 3000
-  newSprite: {fileID: 21300000, guid: 70478e54324bdba44adfcfee14c8bf20, type: 3}
+  health: 100
+  hearts: 3
