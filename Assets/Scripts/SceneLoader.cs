@@ -7,17 +7,41 @@ using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
 
-    [SerializeField] GameObject quitPopup;
+    [SerializeField] GameObject popupMenu;
+    
 
+    private float pause = 0f;
+    private float resume = 1f;
 
-    public void QuitPopupActivate()
+    private void GamePause()
     {
-        quitPopup.SetActive(true);
+        if (!popupMenu.activeInHierarchy)
+        {
+            Time.timeScale = pause;
+        }
     }
-    public void QuitPopupDeactivate()
+
+    private void GameResume()
     {
-        quitPopup.SetActive(false);
+        if (popupMenu.activeInHierarchy)
+        {
+            Time.timeScale = resume;
+        }
     }
+
+    public void PopupActivate()
+    {
+        GamePause();
+        popupMenu.SetActive(true);
+        
+    }
+
+    public void PopupDeactivate()
+    {
+        GameResume();
+        popupMenu.SetActive(false);
+    }
+
 
 
     public void LoadPlayGameScene()
@@ -28,7 +52,6 @@ public class SceneLoader : MonoBehaviour
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("StartMenuScene");
-        //StartCoroutine(PauseGameAndLoadStartMenu());   // add only when make game Pause.
     }
 
     public void LoadShedScene()
@@ -39,11 +62,10 @@ public class SceneLoader : MonoBehaviour
 
     public void WaitAndLoadStartMenu()
     {
-        StartCoroutine(PauseGameAndLoadStartMenu());
+        StartCoroutine(LoadStartMenuWithDelay());
     }
 
-        //Find how to pause game before scenechanging.
-        private IEnumerator PauseGameAndLoadStartMenu()
+    private IEnumerator LoadStartMenuWithDelay()
     {
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("StartMenuScene");
@@ -51,11 +73,8 @@ public class SceneLoader : MonoBehaviour
 
 
 
-
     public void GameQuit()
     {
         Application.Quit();
     }
-
-
 }

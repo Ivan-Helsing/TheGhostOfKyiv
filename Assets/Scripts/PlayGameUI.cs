@@ -5,12 +5,17 @@ using UnityEngine;
 
 public class PlayGameUI : MonoBehaviour
 {
+    [Header("Score")]
     [SerializeField] TMP_Text scoreText;
     [SerializeField] float scoreMultiplier = 3f;
 
     public const string HighScoreKey = "HighScore";
+    public const string LastScoreKey = "LastScore";
 
     private float score;
+
+    [Header("Coins")]
+    [SerializeField] TMP_Text coinsText;
     //private int coins;
 
 
@@ -41,13 +46,21 @@ public class PlayGameUI : MonoBehaviour
     {
         int currentHighscore = PlayerPrefs.GetInt(HighScoreKey, 0);
 
-        if(score > currentHighscore)
-        {
-            PlayerPrefs.SetInt(HighScoreKey, Mathf.FloorToInt(score));
-        }
+        SetHighScore(currentHighscore);
+        SetLastScore();
 
     }
 
+    private void SetLastScore()
+    {
+        PlayerPrefs.SetInt(LastScoreKey, Mathf.FloorToInt(score));
+    }
 
-
+    private void SetHighScore(int currentHighscore)
+    {
+        if (score > currentHighscore)
+        {
+            PlayerPrefs.SetInt(HighScoreKey, Mathf.FloorToInt(score));
+        }
+    }
 }
