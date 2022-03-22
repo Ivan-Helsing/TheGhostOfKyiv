@@ -69,7 +69,7 @@ public class EnemyCombat : MonoBehaviour
         GameObject particlesExplosion = Instantiate(explosionVFX, transform.localPosition, Quaternion.identity);
         Destroy(gameObject);
         Destroy(particlesExplosion, explosionDuration);
-        AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, explosionSoundVolume);
+        AudioSource.PlayClipAtPoint(deathSFX, transform.position, explosionSoundVolume);
 
     }
 

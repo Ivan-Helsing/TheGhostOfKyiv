@@ -160,7 +160,7 @@ MonoBehaviour:
   shotSoundVolume: 0.1
   explosionVFX: {fileID: 2800171866581895630, guid: d527a52c2aa5d71448b7f439d7927799, type: 3}
   deathSFX: {fileID: 8300000, guid: d068052a3a48e7745887225fcb0a1fc1, type: 3}
-  explosionSoundVolume: 0.1
+  explosionSoundVolume: 1
   health: 150
   fireSpeed: 15
   shotCounter: 0
