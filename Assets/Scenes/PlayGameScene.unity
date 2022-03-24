@@ -730,7 +730,7 @@ PrefabInstance:
       objectReference: {fileID: 151794402}
     - target: {fileID: 7794896851812303604, guid: db8639b59208e114f9b9fb84cdeb872a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7794896851866942262, guid: db8639b59208e114f9b9fb84cdeb872a, type: 3}
       propertyPath: m_IsActive
@@ -738,11 +738,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7794896851912166026, guid: db8639b59208e114f9b9fb84cdeb872a, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7794896851912166037, guid: db8639b59208e114f9b9fb84cdeb872a, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -1.0930176
+      objectReference: {fileID: 0}
+    - target: {fileID: 7794896851983483041, guid: db8639b59208e114f9b9fb84cdeb872a, type: 3}
+      propertyPath: coinsText
+      value: 
+      objectReference: {fileID: 7794896852692686662}
+    - target: {fileID: 7794896851983483041, guid: db8639b59208e114f9b9fb84cdeb872a, type: 3}
+      propertyPath: scoreMultiplier
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7794896851983483046, guid: db8639b59208e114f9b9fb84cdeb872a, type: 3}
       propertyPath: m_RootOrder
@@ -852,6 +860,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 151794402}
+    - target: {fileID: 7794896852573676151, guid: db8639b59208e114f9b9fb84cdeb872a, type: 3}
+      propertyPath: m_Name
+      value: Pause Button
+      objectReference: {fileID: 0}
     - target: {fileID: 7794896852603502072, guid: db8639b59208e114f9b9fb84cdeb872a, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -1.0925293
@@ -870,6 +882,17 @@ PrefabInstance:
       objectReference: {fileID: 151794402}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: db8639b59208e114f9b9fb84cdeb872a, type: 3}
+--- !u!114 &7794896852692686662 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7794896851912166036, guid: db8639b59208e114f9b9fb84cdeb872a, type: 3}
+  m_PrefabInstance: {fileID: 7794896852692686661}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8019401299407817573
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -12,11 +12,6 @@ public class WaveConfig : ScriptableObject
     [SerializeField] int numberOfEnemies = 5;
     [SerializeField] float moveSpeed = 2f;
 
-    [Header("Size Scale in Percent:")]
-    [SerializeField] float sizeScale = 1f;
-
-
-    private const float scalingMultiplier = 0.01f;
 
     public GameObject GetEnemyPrefab() { return enemyPrefab; }
 
@@ -38,10 +33,5 @@ public class WaveConfig : ScriptableObject
 
     public float GetEnemiesMovementSpeed() { return moveSpeed; }
 
-    public float GetSizeScaling() 
-    {
-        sizeScale *= scalingMultiplier;
-
-        return sizeScale; 
-    }
+   
 }

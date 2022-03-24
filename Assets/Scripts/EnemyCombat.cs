@@ -76,6 +76,7 @@ public class EnemyCombat : MonoBehaviour
 
     private int SetCoins()
     {
+
         return 1;
     }
 

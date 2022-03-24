@@ -5,11 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Spawner : MonoBehaviour
 {
+    private const float V = 1.2f;
     [SerializeField] List<WaveConfig> waveConfigs;
     [SerializeField] int startingWave = 0;
     [SerializeField] int enemyIncreaser = 0;
     [SerializeField] GameObject putlerMessage;
+
+
     private bool messageInstantiated = false;
+    private float minEnemySize = 0.6f;
+    private float maxEnemySize = 1.4f;
 
 
     void Start()
@@ -25,6 +30,12 @@ public class Spawner : MonoBehaviour
             FindObjectOfType<SceneLoader>().WaitAndLoadStartMenu();
             messageInstantiated = true;
         }
+    }
+
+    public float RandomSizeScale()
+    {
+        float randomScaler = Random.Range(minEnemySize, maxEnemySize);
+        return randomScaler;
     }
 
     private IEnumerator SpawnAllWaves()
@@ -47,6 +58,8 @@ public class Spawner : MonoBehaviour
                 waveConfig.GetEnemyPrefab(),
                 waveConfig.GetWaypoints()[0].transform.position,
                 Quaternion.LookRotation(Vector3.forward , waveConfig.GetWaypoints()[1].transform.position));
+            newEnemy.transform.localScale *= RandomSizeScale();
+            newEnemy.transform.SetParent(gameObject.transform);
             newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig); 
             yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawns());
         }

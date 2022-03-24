@@ -16,7 +16,11 @@ public class PlayGameUI : MonoBehaviour
 
     [Header("Coins")]
     [SerializeField] TMP_Text coinsText;
-    //private int coins;
+
+    private const string TotalCoinsKey = "TotalCoins";
+    private const string CurrentCoinsKey = "CurrentCoins";
+        
+    private int coins;
 
 
     void Start()
