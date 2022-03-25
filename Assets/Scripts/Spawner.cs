@@ -57,9 +57,8 @@ public class Spawner : MonoBehaviour
             var newEnemy = Instantiate(
                 waveConfig.GetEnemyPrefab(),
                 waveConfig.GetWaypoints()[0].transform.position,
-                Quaternion.LookRotation(Vector3.forward , waveConfig.GetWaypoints()[1].transform.position));
+                Quaternion.LookRotation(Vector3.forward , waveConfig.GetWaypoints()[1].transform.position), gameObject.transform);
             newEnemy.transform.localScale *= RandomSizeScale();
-            newEnemy.transform.SetParent(gameObject.transform);
             newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig); 
             yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawns());
         }

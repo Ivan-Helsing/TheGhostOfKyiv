@@ -152,9 +152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29c54d38eced2d94a96ef5b5ac4038ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyLaserPrefab: {fileID: 6126783038880271471, guid: f1ea44b2b9c5fa5499f788113e744610, type: 3}
+  smallBulletGauge: {fileID: 6126783038880271471, guid: 3bbf37671d1f023489a06d56ceff959a, type: 3}
+  middleRocketGauge: {fileID: 6126783038880271471, guid: f1ea44b2b9c5fa5499f788113e744610, type: 3}
+  hugeBombGauge: {fileID: 6126783038880271471, guid: 0de901178b14a134283845b0daecf4bd, type: 3}
   laserShot: {fileID: 8300000, guid: f04670763080c2646af0485a7bbea710, type: 3}
-  shotSoundVolume: 0.1
+  shotSoundVolume: 0.3
   explosionVFX: {fileID: 2800171866581895630, guid: d527a52c2aa5d71448b7f439d7927799, type: 3}
   deathSFX: {fileID: 8300000, guid: d068052a3a48e7745887225fcb0a1fc1, type: 3}
   explosionSoundVolume: 1

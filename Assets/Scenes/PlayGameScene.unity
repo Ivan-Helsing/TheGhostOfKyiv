@@ -1021,5 +1021,9 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1900382751}
+    - target: {fileID: 9020944781469338647, guid: 5f2e4c0601b5ce24e9721674b0523017, type: 3}
+      propertyPath: shotSoundVolume
+      value: 0.015
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f2e4c0601b5ce24e9721674b0523017, type: 3}

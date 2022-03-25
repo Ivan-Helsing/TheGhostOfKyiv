@@ -31,13 +31,10 @@ public class PlayGameUI : MonoBehaviour
     void Update()
     {
         ScoreCounter();
+        coinsText.text = PlayerPrefs.GetInt(CurrentCoinsKey).ToString();
     }
 
-    private void CoinsCounter()
-    {
-        //
 
-    }
 
     private void ScoreCounter ()
     {
