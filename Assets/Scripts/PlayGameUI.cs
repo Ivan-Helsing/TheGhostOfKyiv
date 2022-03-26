@@ -17,11 +17,9 @@ public class PlayGameUI : MonoBehaviour
     [Header("Coins")]
     [SerializeField] TMP_Text coinsText;
 
-    private const string TotalCoinsKey = "TotalCoins";
-    private const string CurrentCoinsKey = "CurrentCoins";
+    public const string TotalCoinsKey = "TotalCoins";
+    public const string CurrentCoinsKey = "CurrentCoins";
         
-    private int coins;
-
 
     void Start()
     {
@@ -31,10 +29,13 @@ public class PlayGameUI : MonoBehaviour
     void Update()
     {
         ScoreCounter();
-        coinsText.text = PlayerPrefs.GetInt(CurrentCoinsKey).ToString();
+        CurrentCoinsView();
     }
 
-
+    private void CurrentCoinsView()
+    {
+        coinsText.text = PlayerPrefs.GetInt(CurrentCoinsKey).ToString();
+    }
 
     private void ScoreCounter ()
     {

@@ -251,8 +251,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   highScoreText: {fileID: 1253845302}
   lastScoreText: {fileID: 3524174401580797070}
-  coinsText: {fileID: 3524174401580797069}
-  fuelText: {fileID: 3524174401580797068}
+  totalCoinsText: {fileID: 3524174401580797069}
+  currentFuelText: {fileID: 3524174401580797068}
 --- !u!4 &1458185756
 Transform:
   m_ObjectHideFlags: 0
@@ -350,6 +350,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1288009661}
+    - target: {fileID: 3524174400662513085, guid: 4c2845aeb416bbe419e10a7954cad656, type: 3}
+      propertyPath: m_text
+      value: High Score
+      objectReference: {fileID: 0}
     - target: {fileID: 3524174400771008638, guid: 4c2845aeb416bbe419e10a7954cad656, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -454,21 +458,29 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1288009661}
+    - target: {fileID: 3566883879039658422, guid: 4c2845aeb416bbe419e10a7954cad656, type: 3}
+      propertyPath: m_text
+      value: Last Score
+      objectReference: {fileID: 0}
     - target: {fileID: 4201948110862811930, guid: 4c2845aeb416bbe419e10a7954cad656, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1288009661}
     - target: {fileID: 4735411639131743362, guid: 4c2845aeb416bbe419e10a7954cad656, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5202664562158721858, guid: 4c2845aeb416bbe419e10a7954cad656, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6353554732458074907, guid: 4c2845aeb416bbe419e10a7954cad656, type: 3}
+      propertyPath: m_text
+      value: Total Coins
+      objectReference: {fileID: 0}
     - target: {fileID: 6912581862114119403, guid: 4c2845aeb416bbe419e10a7954cad656, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8185486310429864510, guid: 4c2845aeb416bbe419e10a7954cad656, type: 3}
       propertyPath: m_IsActive

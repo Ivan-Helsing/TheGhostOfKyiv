@@ -18,12 +18,18 @@ public class EnemyCombat : MonoBehaviour
     [SerializeField] AudioClip deathSFX;
     [SerializeField] [Range(0,1)] float explosionSoundVolume = 0.75f;
 
+
     [Header ("Enemy Parameters")]
     [SerializeField] float health = 500f;
     [SerializeField] float fireSpeed = 20f;
     [SerializeField] float shotCounter;
     [SerializeField] float minShotingDelay, maxShotingDelay;
     [SerializeField] float explosionDuration = 0.5f;
+
+
+    private bool isSmallEnemy;
+    //private bool isMiddleEnemy;
+    private bool isHugeEnemy;
 
     [Header("Coins Reward")]
     [SerializeField] int smallEnemyReward = 10;
@@ -32,7 +38,8 @@ public class EnemyCombat : MonoBehaviour
 
     public int coinsReward = 0;
 
-    private const string CurrentCoinRewardKey = "CurrentCoinReward";
+    //public const string RewardedCoinsKey = "RewardedCoins";
+    //private const int 0 = 0;
 
 
     [Header("Score Reward")]
@@ -71,8 +78,11 @@ public class EnemyCombat : MonoBehaviour
 
     private void FireGauge()
     {
-        if (gameObject.transform.localScale.x < .9f) { enemyLaserPrefab = smallBulletGauge; }
-        else if (gameObject.transform.localScale.x > 1.1f) { enemyLaserPrefab = hugeBombGauge; }
+        isSmallEnemy = gameObject.transform.localScale.x < .9f;
+        isHugeEnemy = gameObject.transform.localScale.x > 1.1f;
+
+        if (isSmallEnemy) { enemyLaserPrefab = smallBulletGauge; }
+        else if (isHugeEnemy) { enemyLaserPrefab = hugeBombGauge; }
         else { enemyLaserPrefab = middleRocketGauge; }
     }
 
@@ -95,11 +105,28 @@ public class EnemyCombat : MonoBehaviour
 
     private void Death()
     {
-        //SetCoins();
+        ExplosionEffect();
+        AudioSource.PlayClipAtPoint(deathSFX, transform.position, explosionSoundVolume);
+    }
+
+    private void ExplosionEffect()
+    {
+
         GameObject particlesExplosion = Instantiate(explosionVFX, transform.localPosition, Quaternion.identity);
         Destroy(gameObject);
+        CoinsReward();
         Destroy(particlesExplosion, explosionDuration);
-        AudioSource.PlayClipAtPoint(deathSFX, transform.position, explosionSoundVolume);
+    }
+
+    private void CoinsReward()
+    {
+        if (isSmallEnemy) { coinsReward = smallEnemyReward; }
+        else if (isHugeEnemy) { coinsReward = hugeEnemyReward; }
+        else { coinsReward = middleEnemyReward; }
+
+        int rewarded = PlayerPrefs.GetInt(PlayGameUI.CurrentCoinsKey, 0);
+        rewarded += coinsReward;
+        PlayerPrefs.SetInt(PlayGameUI.CurrentCoinsKey, rewarded);
 
     }
 
