@@ -448,7 +448,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalCoinsText: {fileID: 255274605}
+  priceCoinsTExt: {fileID: 1279738208}
   highScoreText: {fileID: 1548196903}
+  priceHighScoreText: {fileID: 1279738207}
+  aircraftLevel:
+  - {fileID: 21300000, guid: d86d6c1eb9dda3f47b62c4ba3c62b13a, type: 3}
+  - {fileID: 21300000, guid: 33e0be396b32d2248ae102f0e6153fb8, type: 3}
+  - {fileID: 21300000, guid: 8783e823ada62f24e97f9167f91a8c9b, type: 3}
+  - {fileID: 21300000, guid: 6cf44c3274cdac0448a68cb4bfed7cde, type: 3}
+  - {fileID: 21300000, guid: cc715c8a84432e94fa8a1221976124c0, type: 3}
+  - {fileID: 21300000, guid: 4b02b4c53cfa5dc4d9eddbde5f756fba, type: 3}
+  - {fileID: 21300000, guid: 6a2d76ba3c14c1a41a2ca26306d23fc7, type: 3}
+  - {fileID: 21300000, guid: 1b2d8310a711e354fb20d61b68f48846, type: 3}
+  - {fileID: 21300000, guid: ea880bdea587380439f0064fa2b0c5be, type: 3}
+  - {fileID: 21300000, guid: 9ced5cb32b7d55442acb594e2551fbed, type: 3}
+  - {fileID: 21300000, guid: c2ba7e5dba2ecc142995ef5b23b3363a, type: 3}
+  - {fileID: 21300000, guid: 1c357fbfa20deec47a901445ce6865ee, type: 3}
+  - {fileID: 21300000, guid: 70478e54324bdba44adfcfee14c8bf20, type: 3}
+  - {fileID: 21300000, guid: eedfe8670bc837c42b5d070298173ad5, type: 3}
+  - {fileID: 21300000, guid: 2a0dda614709fe8499e3bde25a380053, type: 3}
+  - {fileID: 21300000, guid: a9030553792931e4486a786f8c088463, type: 3}
 --- !u!224 &1095791257 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 582697726932256872, guid: b2df539556ad1504d867c290fec0d85c, type: 3}
@@ -461,6 +480,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 924270836}
     m_Modifications:
+    - target: {fileID: 246931455, guid: b2df539556ad1504d867c290fec0d85c, type: 3}
+      propertyPath: m_Name
+      value: Price High Score Number
+      objectReference: {fileID: 0}
+    - target: {fileID: 504829055, guid: b2df539556ad1504d867c290fec0d85c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1133030648, guid: b2df539556ad1504d867c290fec0d85c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1861499707, guid: b2df539556ad1504d867c290fec0d85c, type: 3}
+      propertyPath: m_Name
+      value: Price Money Number
+      objectReference: {fileID: 0}
     - target: {fileID: 582697725933033898, guid: b2df539556ad1504d867c290fec0d85c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -596,6 +631,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2566062684788231393, guid: b2df539556ad1504d867c290fec0d85c, type: 3}
   m_PrefabInstance: {fileID: 1279738205}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1279738207 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 246931457, guid: b2df539556ad1504d867c290fec0d85c, type: 3}
+  m_PrefabInstance: {fileID: 1279738205}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1279738208 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1861499709, guid: b2df539556ad1504d867c290fec0d85c, type: 3}
+  m_PrefabInstance: {fileID: 1279738205}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1548196903 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 582697726677827126, guid: b2df539556ad1504d867c290fec0d85c, type: 3}

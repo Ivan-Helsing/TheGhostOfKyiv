@@ -43,8 +43,19 @@ public class EnemyCombat : MonoBehaviour
 
 
     [Header("Score Reward")]
-    [SerializeField] float scoreMultiplier = 0.001f;
-    
+    [SerializeField] float smallAircraftScore = 1;
+    [SerializeField] float middleAircraftScore = 2;
+    [SerializeField] float hugeAircraftScore = 3;
+    [SerializeField] float slowAircraftScore = 10;
+    [SerializeField] float mediumAircraftScore = 20;
+    [SerializeField] float fastAircraftScore = 30;
+
+    private float totalAddScore = 0f;
+    private float basicAddScore = 1f;
+    private float scoreBySize; 
+    private float scoreBySpeed;
+
+
 
     void Start()
     {
@@ -115,6 +126,7 @@ public class EnemyCombat : MonoBehaviour
         GameObject particlesExplosion = Instantiate(explosionVFX, transform.localPosition, Quaternion.identity);
         Destroy(gameObject);
         CoinsReward();
+        SetScoreMultiplier();
         Destroy(particlesExplosion, explosionDuration);
     }
 
@@ -130,4 +142,16 @@ public class EnemyCombat : MonoBehaviour
 
     }
 
+    private void SetScoreMultiplier()
+    {
+        if (isSmallEnemy) { scoreBySize = smallAircraftScore; }
+        else if (isHugeEnemy) { scoreBySize = hugeAircraftScore; }
+        else { scoreBySize = middleAircraftScore; }
+        totalAddScore += (basicAddScore * scoreBySize * scoreBySpeed);
+    }
+
+    public float GetAddScore()
+    {
+        return totalAddScore;
+    }
 }

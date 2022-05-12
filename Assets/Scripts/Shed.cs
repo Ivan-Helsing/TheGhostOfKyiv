@@ -7,11 +7,17 @@ public class Shed : MonoBehaviour
 {
     [Header("Coins")]
     [SerializeField] TMP_Text totalCoinsText;
+    [SerializeField] TMP_Text priceCoinsTExt;
 
     private const int ResetToDefaultValue = 0;
 
     [Header("Score")]
     [SerializeField] TMP_Text highScoreText;
+    [SerializeField] TMP_Text priceHighScoreText;
+
+    [Header("Aircraft")]
+    [SerializeField] Sprite[] aircraftLevel;
+
 
     private void Update()
     {
@@ -19,6 +25,10 @@ public class Shed : MonoBehaviour
         TotalCoinsSetAndView();
     }
 
+    private void AircraftChanger()
+    {
+
+    }
 
     private void TotalCoinsSetAndView()
     {

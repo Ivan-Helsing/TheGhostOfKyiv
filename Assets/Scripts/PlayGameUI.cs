@@ -7,11 +7,11 @@ public class PlayGameUI : MonoBehaviour
 {
     [Header("Score")]
     [SerializeField] TMP_Text scoreText;
-    [SerializeField] float scoreMultiplier = 3f;
 
     public const string HighScoreKey = "HighScore";
     public const string LastScoreKey = "LastScore";
 
+    private float scoreMultiplier = 10f;
     private float score;
 
     [Header("Coins")]
